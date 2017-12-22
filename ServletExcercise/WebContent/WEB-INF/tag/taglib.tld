@@ -1,0 +1,9 @@
+<tag>
+    <name>iteration</name>
+    <tagclass>in.vamsoft.servlet.IterationTaghand</tagclass>
+    <bodycontent>jsp</bodycontent>
+    <attribute>
+        <name>index</name>
+        <required>true</required>
+    </attribute>
+</tag>

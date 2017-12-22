@@ -1,0 +1,6 @@
+	create table usercreation(id serial,name varchar(50),email varchar(50),password varchar(50));
+	
+	select * from usercreation;
+	desc usercreation;
+	\d usercreation;
+	insert into usercreation(name,email,password) values('balu','balu@gmail.com','balu6');

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Registeration Form</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<form action="UserRegister" method="post">
+  <div class="container">
+  
+  	<h2>User Register </h2>
+  	<label><b>Name</b></label>  			<input type="text" placeholder="Enter Name" name="name" required><br><br>    		
+    <label><b>Contact No</b></label>		<input type="text" placeholder="Enter mobileno" name="phno" required><br><br>    		
+    <label><b>Email</b></label>				<input type="text" placeholder="Enter Email" name="email" required><br><br>    		
+    <label><b>Password</b></label>			<input type="password" placeholder="Enter Password" name="psw" required><br><br>    		
+    <label><b>Confirm Password</b></label>	<input type="password" placeholder="Repeat Password" name="psw-repeat" required><br><br>
+   			 
+    <input type="checkbox" checked="checked"> Remember me
+    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p><br><br>
+
+    <div class="clearfix">
+      <button type="button"  class="cancelbtn">Cancel</button>
+      <button type="submit" class="signupbtn">Sign Up</button>
+    </div>
+  </div>
+</form>
+
+</body>
+</html>

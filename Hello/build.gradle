@@ -1,0 +1,39 @@
+apply plugin: 'java'
+apply plugin: 'war' 
+apply plugin: 'com.bmuschko.tomcat'
+ 
+repositories {
+    jcenter()
+}
+ 
+dependencies {   
+  
+    testCompile 'junit:junit:4.12' 
+   
+    providedCompile "javax.servlet:javax.servlet-api:3.1.0"      
+     
+}
+ 
+ 
+dependencies {
+    def tomcatVersion = '8.5.5'
+    
+    tomcat "org.apache.tomcat.embed:tomcat-embed-core:${tomcatVersion}",
+           "org.apache.tomcat.embed:tomcat-juli:${tomcatVersion}",
+           "org.apache.tomcat.embed:tomcat-embed-jasper:${tomcatVersion}"
+           // https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-core
+//compile group: 'org.apache.tomcat.embed', name: 'tomcat-embed-core', version: '8.5.5'
+           
+}
+ 
+ 
+buildscript {
+ 
+    repositories {
+        jcenter()
+    }
+ 
+    dependencies {
+        classpath 'com.bmuschko:gradle-tomcat-plugin:2.2.2'
+    }
+}
