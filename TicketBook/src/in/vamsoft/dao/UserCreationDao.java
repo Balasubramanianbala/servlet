@@ -2,6 +2,7 @@ package in.vamsoft.dao;
 
 import in.vamsoft.pojomodel.DbconnectionUtil;
 import in.vamsoft.pojomodel.LoginInfo;
+import in.vamsoft.pojomodel.PassHistory;
 import in.vamsoft.pojomodel.UserCreation;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -129,7 +130,7 @@ public class UserCreationDao {
 
     return null;
 
-  }
+  } 
 
 
   public boolean loginformation(LoginInfo loginfo) {
@@ -157,8 +158,23 @@ public class UserCreationDao {
     }
     return false;
   }
+
+  public void updatePassword(String email,String newpass) {
+    
+    try (PreparedStatement ps = con
+        .prepareStatement("update usercreation  set password=? where email=?  ")) {
+      ps.setString(1, newpass);
+      ps.setString(2, email);
+      
+      ps.executeUpdate();
+      
+    }
+    catch (Exception e) {
+      log.info("query syntax error");
+      log.error("syntax error on query");
+    }
+    
+  }
     
   
-
-
 }
